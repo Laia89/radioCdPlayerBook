@@ -20,7 +20,7 @@ public class Giant extends Player {
             return 0;
         } else {
             this.isWeak = true;
-            return 4 + random.nextInt(2);
+            return 4 + random.nextInt(3);
         }
     }
 
