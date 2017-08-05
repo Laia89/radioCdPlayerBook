@@ -27,8 +27,9 @@ public class HtmlBookPrinter implements BookPrinter {
     @Override
     public String bookToString(Book book) {
         String bookToHtml = "<h1>" + book.getTitle() + "</h1><h2>" + book.getAuthor() + "</h2><ol>";
-        int i = 0;
-        while( i < book.getChapters().size() ) { bookToHtml += "<li>" + book.getChapters().get(i).getTitle() + "</li>"; }
+        for (Chapter chapter : book.getChapters()) {
+            bookToHtml += "<li>" + chapter.getTitle() + "</li>";
+        }
         bookToHtml += "</ol>";
         System.out.println(bookToHtml);
         return bookToHtml;

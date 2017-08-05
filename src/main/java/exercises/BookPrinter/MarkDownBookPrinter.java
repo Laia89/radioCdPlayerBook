@@ -1,7 +1,7 @@
 package main.java.exercises.BookPrinter;
 
 import main.java.exercises.book.Book;
-
+import main.java.exercises.book.Chapter;
 
 
 public class MarkDownBookPrinter implements BookPrinter {
@@ -14,8 +14,9 @@ public class MarkDownBookPrinter implements BookPrinter {
     @Override
     public String bookToString(Book book) {
         String bookToMarkdown = "#" + book.getTitle() + "\n\n##" + book.getAuthor();
-        int i = 0;
-        while ( i < book.getChapters().size() ) { bookToMarkdown += i + ". " + book.getChapters().get(i).getTitle() + "\n"; }
+        for (Chapter chapter : book.getChapters()) {
+            bookToMarkdown += "1. " + book.getChapters().get(i).getTitle() + "\n";
+        }
         System.out.println(bookToMarkdown);
         return bookToMarkdown;
     }
