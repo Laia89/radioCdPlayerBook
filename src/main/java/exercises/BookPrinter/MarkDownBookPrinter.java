@@ -15,7 +15,7 @@ public class MarkDownBookPrinter implements BookPrinter {
     public String bookToString(Book book) {
         String bookToMarkdown = "#" + book.getTitle() + "\n\n##" + book.getAuthor();
         for (Chapter chapter : book.getChapters()) {
-            bookToMarkdown += "1. " + book.getChapters().get(i).getTitle() + "\n";
+            bookToMarkdown += "1. " + chapter.getTitle() + "\n";
         }
         System.out.println(bookToMarkdown);
         return bookToMarkdown;
