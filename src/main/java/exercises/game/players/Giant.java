@@ -3,6 +3,7 @@ package main.java.exercises.game.players;
 import java.util.Random;
 
 public class Giant extends Player {
+    //properties
     private Random random;
     private boolean isWeak;
 

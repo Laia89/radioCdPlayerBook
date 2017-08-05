@@ -1,3 +1,4 @@
-'.idea' 
-'out' 
-'*.iml' 
+# Ignore IDEA files
+*.iml
+.idea/
+out/
