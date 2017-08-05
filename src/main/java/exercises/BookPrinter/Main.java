@@ -11,7 +11,7 @@ import java.util.List;
 public class Main {
 
     public static void main (String[] args) {
-        List chapters = new ArrayList();
+        List<Chapter> chapters = new ArrayList<Chapter>();
         chapters.add(new Chapter("Breaking the Surface", 26));
         chapters.add(new Chapter("A Trip to Objectville", 22));
         chapters.add(new Chapter("Know Your Variables", 53));
